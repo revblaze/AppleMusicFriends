@@ -11,6 +11,9 @@
 		C23A14552670FE8100215790 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A14542670FE8100215790 /* ViewController.swift */; };
 		C23A14572670FE8300215790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23A14562670FE8300215790 /* Assets.xcassets */; };
 		C23A145A2670FE8300215790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23A14582670FE8300215790 /* Main.storyboard */; };
+		C23A14642671009900215790 /* WKConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A14632671009900215790 /* WKConfiguration.swift */; };
+		C23A1466267100D100215790 /* WKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A1465267100D100215790 /* WKClient.swift */; };
+		C23A14682671132300215790 /* URLDidChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A14672671132300215790 /* URLDidChange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		C23A14592670FE8300215790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C23A145B2670FE8300215790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C23A145C2670FE8300215790 /* Friends.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Friends.entitlements; sourceTree = "<group>"; };
+		C23A14632671009900215790 /* WKConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKConfiguration.swift; sourceTree = "<group>"; };
+		C23A1465267100D100215790 /* WKClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKClient.swift; sourceTree = "<group>"; };
+		C23A14672671132300215790 /* URLDidChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDidChange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +61,23 @@
 			children = (
 				C23A14522670FE8100215790 /* AppDelegate.swift */,
 				C23A14542670FE8100215790 /* ViewController.swift */,
+				C23A14622671007B00215790 /* WebKit */,
 				C23A14562670FE8300215790 /* Assets.xcassets */,
 				C23A14582670FE8300215790 /* Main.storyboard */,
 				C23A145B2670FE8300215790 /* Info.plist */,
 				C23A145C2670FE8300215790 /* Friends.entitlements */,
 			);
 			path = Friends;
+			sourceTree = "<group>";
+		};
+		C23A14622671007B00215790 /* WebKit */ = {
+			isa = PBXGroup;
+			children = (
+				C23A14632671009900215790 /* WKConfiguration.swift */,
+				C23A1465267100D100215790 /* WKClient.swift */,
+				C23A14672671132300215790 /* URLDidChange.swift */,
+			);
+			path = WebKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23A14642671009900215790 /* WKConfiguration.swift in Sources */,
 				C23A14552670FE8100215790 /* ViewController.swift in Sources */,
+				C23A14682671132300215790 /* URLDidChange.swift in Sources */,
+				C23A1466267100D100215790 /* WKClient.swift in Sources */,
 				C23A14532670FE8100215790 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +301,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.justinbush.Friends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -302,6 +324,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.justinbush.Friends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
