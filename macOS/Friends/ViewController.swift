@@ -13,11 +13,15 @@ class ViewController: NSViewController, NSWindowDelegate, WKUIDelegate, WKNaviga
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var detailWebView: WKWebView!
     
+    @IBOutlet weak var blurView: NSVisualEffectView!
+    
     var webViewURLObserver: NSKeyValueObservation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initWebView()
+        
         webViewURLObserver = webView.observe(\.url, options: .new) { [weak self] webView, change in
             self?.urlDidChange("\(String(describing: change.newValue))") }
     }
